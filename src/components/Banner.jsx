@@ -6,10 +6,10 @@ const Banner = () => {
         <section className="relative min-h-screen w-full bg-[#030303] text-white flex flex-col items-center justify-start overflow-hidden pt-12 md:pt-20 pb-16">
 
             {/* Background Glow */}
-            <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-[140%] aspect-square max-w-[1200px] bg-radial-gradient from-blue-600/30 via-purple-900/10 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+            <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-[140%] aspect-square max-w-300 bg-radial-gradient from-blue-600/30 via-purple-900/10 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
+            <div className="relative z-10 max-w-6xl mx-auto px-4 text-center flex flex-col items-center">
 
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 bg-[#121214]/60 border border-zinc-800/80 rounded-full px-4 py-1.5 text-xs font-medium text-zinc-400 uppercase mb-8 backdrop-blur-md">
@@ -63,43 +63,44 @@ const Banner = () => {
                     <Image
                         src="/planet1.png"
                         alt="Globe"
-                        width={1200}
-                        height={1200}
-                        className="w-[75vw] md:w-[55vw] h-auto object-contain"
+                        width={1400}
+                        height={1400}
+                        className="w-[120vw] md:w-[100vw] h-auto object-contain"
                         priority
                     />
 
-                    {/* Text on Globe */}
-                    <div className="absolute top-10 md:top-16 text-center">
-                        <h2 className="text-2xl md:text-4xl text-zinc-300">
+                    {/* Center Text on Globe */}
+                    <div className="absolute inset-0 flex items-center justify-center text-center px-4 mb-30">
+                        <h2 className="text-2xl md:text-4xl text-zinc-300 leading-snug">
                             Assisting over <span className="text-white font-semibold">15,000 job seekers</span><br />
                             find their dream positions.
                         </h2>
                     </div>
+
                 </div>
 
                 {/* Cards (OVERLAP FIX HERE 🔥) */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl -mt-28 md:-mt-80 relative z-20">
 
-                    <div className="bg-gradient-to-b from-[#0f0f11] to-[#070708] border border-zinc-900 rounded-2xl p-6">
+                    <div className="bg-linear-to-b from-[#0f0f11] to-[#070708] border border-zinc-900 rounded-2xl p-6">
                         💼
                         <div className="text-3xl font-bold mt-2">50K</div>
                         <div className="text-zinc-500 text-xs">Active Jobs</div>
                     </div>
 
-                    <div className="bg-gradient-to-b from-[#0f0f11] to-[#070708] border border-zinc-900 rounded-2xl p-6">
+                    <div className="bg-linear-to-b from-[#0f0f11] to-[#070708] border border-zinc-900 rounded-2xl p-6">
                         🏢
                         <div className="text-3xl font-bold mt-2">12K</div>
                         <div className="text-zinc-500 text-xs">Companies</div>
                     </div>
 
-                    <div className="bg-gradient-to-b from-[#0f0f11] to-[#070708] border border-zinc-900 rounded-2xl p-6">
+                    <div className="bg-linear-to-b from-[#0f0f11] to-[#070708] border border-zinc-900 rounded-2xl p-6">
                         🔍
                         <div className="text-3xl font-bold mt-2">2M</div>
                         <div className="text-zinc-500 text-xs">Job Seekers</div>
                     </div>
 
-                    <div className="bg-gradient-to-b from-[#0f0f11] to-[#070708] border border-zinc-900 rounded-2xl p-6">
+                    <div className="bg-linear-to-b from-[#0f0f11] to-[#070708] border border-zinc-900 rounded-2xl p-6">
                         ⭐
                         <div className="text-3xl font-bold mt-2">97%</div>
                         <div className="text-zinc-500 text-xs">Satisfaction</div>
