@@ -6,7 +6,7 @@ const Banner = () => {
         <section className="relative min-h-[calc(100vh-80px)] w-full bg-[#030303] text-white flex flex-col items-center justify-start overflow-hidden pt-16 md:pt-28">
             
             {/* Background Glow / Radial Gradient Effect behind the globe */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] aspect-square max-w-[1000px] bg-radial-gradient from-purple-600/20 via-blue-900/10 to-transparent rounded-full blur-3xl pointer-events-none -z-10 translate-y-[40%]"></div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] aspect-square max-w-250 bg-radial-gradient from-purple-600/20 via-blue-900/10 to-transparent rounded-full blur-3xl pointer-events-none -z-10 translate-y-[40%]"></div>
 
             {/* Main Content Container */}
             <div className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center pb-12">
@@ -45,7 +45,7 @@ const Banner = () => {
                     </div>
 
                     {/* Divider Line */}
-                    <div className="hidden sm:block h-6 w-[1px] bg-zinc-800"></div>
+                    <div className="hidden sm:block h-6 w-px bg-zinc-800"></div>
 
                     {/* Location Input */}
                     <div className="hidden sm:flex items-center gap-3 flex-1 min-w-0">
@@ -85,7 +85,7 @@ const Banner = () => {
             </div>
 
             {/* Background Globe Wrapper */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] pointer-events-none select-none z-0 translate-y-[35%] md:translate-y-[25%] opacity-80 mix-blend-screen">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-400 pointer-events-none select-none z-0 translate-y-[35%] md:translate-y-[25%] opacity-80 mix-blend-screen">
                 <Image
                     width={900}
                     height={900}
