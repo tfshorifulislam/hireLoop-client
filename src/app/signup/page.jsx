@@ -1,6 +1,6 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 import {
     Form,
     TextField,
@@ -16,25 +16,27 @@ import { signUp } from "@/lib/auth-client";
 
 export default function SignUpPage() {
 
+    const [role, setRole] = useState("seeker");
+
     const handleSingUp = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const userData = Object.fromEntries(formData.entries());
         console.log(userData);
 
-        const {data, error} = await signUp.email({
+        const { data, error } = await signUp.email({
             email: userData.email,
             password: userData.password,
             name: userData.name,
-            role: userData["seeker"],
+            role: role,
         })
 
-        if(error) {
+        if (error) {
             console.error("Signup error:", error);
             alert(error.message || "An error occurred during signup. Please try again.");
             return;
         }
-        if(data) {
+        if (data) {
             console.log("Signup successful:", data);
             alert("Signup successful! Please check your email to verify your account.");
         }
@@ -160,6 +162,7 @@ export default function SignUpPage() {
                             <Label>Subscription plan</Label>
 
                             <RadioGroup
+                                onChange={(value) => setRole(value)}
                                 defaultValue="seeker"
                                 name="job-seeker"
                                 orientation="horizontal"
