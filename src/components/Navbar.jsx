@@ -3,11 +3,20 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { authClient, signOut } from "@/lib/auth-client";
+import { Button } from "@heroui/react";
 
 const Navbar = () => {
+
+  const { data: session, isPending } = authClient.useSession()
+  console.log("Session data in Navbar:", session, "Is pending:", isPending);
+
+  const handleLogout = async () => {
+    await signOut()
+  } 
+
   return (
     <div className="relative w-full  overflow-hidden mb-10">
-
       {/* Navbar */}
       <nav className="relative z-50 w-full text-white py-6">
         <div className="w-11/12 max-w-7xl mx-auto flex items-center justify-between">
@@ -61,22 +70,23 @@ const Navbar = () => {
               {/* Divider */}
               <div className="h-4 w-[1px] bg-zinc-800"></div>
 
-              {/* Sign In */}
-              <Link
+
+              {session ? '' : <Link
                 href="/signin"
                 className="text-xs md:text-sm font-medium text-[#7C74FF] hover:text-[#5C53FE] transition-colors"
               >
                 Sign In
-              </Link>
+              </Link>}
             </div>
 
-            {/* Get Started */}
-            <Link
-              href="/signup"
-              className="bg-white text-black text-xs md:text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all shadow-md"
-            >
-              Get Started
-            </Link>
+
+            {session ? <Button variant='danger' onClick={handleLogout}>Logout</Button>
+              : <Link
+                href="/signup"
+                className="bg-white text-black text-xs md:text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all shadow-md"
+              >
+                Get Started
+              </Link>}
           </div>
         </div>
       </nav>

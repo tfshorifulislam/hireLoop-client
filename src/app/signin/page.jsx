@@ -8,6 +8,7 @@ import {
     Input,
     FieldError,
     Button,
+    Link,
 } from "@heroui/react";
 import { signIn } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
@@ -199,9 +200,9 @@ export default function SignIn() {
                         {/* SIGNUP LINK */}
                         <p className="text-center text-zinc-500 text-sm">
                             Don’t have an account?
-                            <span className="text-cyan-400 ml-1 cursor-pointer">
+                            <Link href="/signup" className="text-cyan-400 ml-1 cursor-pointer">
                                 Sign Up
-                            </span>
+                            </Link>
                         </p>
 
                     </Form>

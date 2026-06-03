@@ -40,7 +40,7 @@ export default function SignUpPage() {
         if (data) {
             console.log("Signup successful:", data);
             alert("Signup successful! Please check your email to verify your account.");
-            redirect('/');
+            // redirect('/');
         }
     }
 
