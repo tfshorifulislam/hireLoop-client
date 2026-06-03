@@ -1,23 +1,30 @@
 'use client';
+
 import StatsBar from '@/components/Dashboard/StateCard';
 import { useSession } from '@/lib/auth-client';
-import React from 'react';
 
 const RecruiterDashboardPage = () => {
     const { data: session, isPending } = useSession();
+
     if (isPending) {
-        return <div>Loading...</div>
+        return (
+            <div className="flex items-center justify-center min-h-[60vh]">
+                <span className="loading loading-spinner loading-lg"></span>
+            </div>
+        );
     }
 
     const user = session?.user;
-    console.log('user in the recruiter dashboard:', user);
 
     return (
-        <div>
-            <h1>
-                Welcome Back, {user?.name}!
-                <StatsBar />
+        <div className="space-y-8">
+            {/* Header */}
+            <h1 className="text-3xl md:text-4xl font-bold">
+                Welcome Back, {user?.name}
             </h1>
+
+            {/* Stats */}
+            <StatsBar />
         </div>
     );
 };
