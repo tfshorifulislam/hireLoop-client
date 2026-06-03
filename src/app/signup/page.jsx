@@ -13,6 +13,7 @@ import {
     RadioGroup,
 } from "@heroui/react";
 import { signUp } from "@/lib/auth-client";
+import { redirect } from "next/navigation";
 
 export default function SignUpPage() {
 
@@ -39,6 +40,7 @@ export default function SignUpPage() {
         if (data) {
             console.log("Signup successful:", data);
             alert("Signup successful! Please check your email to verify your account.");
+            redirect('/');
         }
     }
 

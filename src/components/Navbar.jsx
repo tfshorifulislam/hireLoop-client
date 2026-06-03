@@ -63,7 +63,7 @@ const Navbar = () => {
 
               {/* Sign In */}
               <Link
-                href="#"
+                href="/signin"
                 className="text-xs md:text-sm font-medium text-[#7C74FF] hover:text-[#5C53FE] transition-colors"
               >
                 Sign In
@@ -72,7 +72,7 @@ const Navbar = () => {
 
             {/* Get Started */}
             <Link
-              href="#"
+              href="/signup"
               className="bg-white text-black text-xs md:text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-zinc-200 transition-all shadow-md"
             >
               Get Started
