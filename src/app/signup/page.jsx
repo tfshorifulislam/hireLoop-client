@@ -13,10 +13,11 @@ import {
     RadioGroup,
 } from "@heroui/react";
 import { signUp } from "@/lib/auth-client";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
+
 
 export default function SignUpPage() {
-
+    const router = useRouter();
     const [role, setRole] = useState("seeker");
 
     const handleSingUp = async (e) => {
@@ -40,7 +41,8 @@ export default function SignUpPage() {
         if (data) {
             console.log("Signup successful:", data);
             alert("Signup successful! Please check your email to verify your account.");
-            // redirect('/');
+            router.push("/");
+            router.refresh();
         }
     }
 

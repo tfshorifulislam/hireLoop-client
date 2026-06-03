@@ -35,6 +35,7 @@ export default function SignIn() {
 
         if (data) {
             router.push("/");
+            router.refresh();
         }
     };
 
