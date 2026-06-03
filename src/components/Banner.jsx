@@ -65,7 +65,7 @@ const Banner = () => {
                         alt="Globe"
                         width={1400}
                         height={1400}
-                        className="w-[120vw] md:w-[100vw] h-auto object-contain"
+                        className="w-[120vw] md:w-screen h-auto object-contain"
                         priority
                     />
 
