@@ -16,7 +16,7 @@ import {
     toast
 } from "@heroui/react";
 import { Briefcase, Globe } from "@gravity-ui/icons";
-// import { createJob } from "@/lib/actions/jobs";
+import { createJob } from "@/lib/actions/jobs";
 import { redirect } from "next/navigation";
 
 export default function PostJobPage() {
@@ -67,7 +67,8 @@ export default function PostJobPage() {
             isPubliclyVisible: true,
         };
 
-        // const res = await createJob(payload);
+        const res = await createJob(payload);
+
         if (res.insertedId) {
             toast.success("Job posted successfully!");
             e.target.reset();
