@@ -4,7 +4,6 @@ import React from 'react';
 import { FaArrowRight, FaMapMarkerAlt, FaBriefcase, FaDollarSign } from 'react-icons/fa';
 
 const JobDiscovery = () => {
-    // ৬টি কার্ডের জন্য ডামি ডাটা অ্যারে
     const jobs = [
         { id: 1, title: "Frontend Developer" },
         { id: 2, title: "Frontend Developer" },
@@ -15,7 +14,7 @@ const JobDiscovery = () => {
     ];
 
     return (
-        <div className="w-full bg-[#030303] text-white py-24 px-6 md:px-12 relative overflow-hidden">
+        <div className="w-full bg-[#030303] text-white mb-10 px-6 relative overflow-hidden">
             
             {/* ব্যাকগ্রাউন্ডের সূক্ষ্ম গ্লো মডিউল */}
             <div className="absolute top-12 left-1/4 w-[600px] h-[300px] bg-[#5C53FE]/5 blur-[130px] pointer-events-none rounded-full"></div>

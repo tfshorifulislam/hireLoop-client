@@ -53,7 +53,7 @@ const Subscription = () => {
     ];
 
     return (
-        <div className="w-full bg-[#030303] text-white py-24 px-6 md:px-12 overflow-hidden relative">
+        <div className="w-full bg-[#030303] text-white mb-10  overflow-hidden relative">
             
             {/* ব্যাকগ্রাউন্ড গ্লো এফেক্ট */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-[#5C53FE]/5 blur-[120px] pointer-events-none rounded-full"></div>
