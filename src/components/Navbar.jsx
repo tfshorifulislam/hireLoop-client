@@ -8,7 +8,7 @@ import { Button } from "@heroui/react";
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
-  const [isOpen, setIsOpen] = useState(false); // Mobile menu open/close state
+  const [isOpen, setIsOpen] = useState(false);
 
   console.log("Session data in Navbar:", session, "Is pending:", isPending);
 
@@ -43,7 +43,7 @@ const Navbar = () => {
             <div className="flex items-center gap-6 bg-[#131315]/70 border border-zinc-800/50 rounded-full px-6 py-2.5 backdrop-blur-md shadow-lg">
               <ul className="flex items-center gap-6 text-sm font-medium text-zinc-400">
                 <li>
-                  <Link href="#" className="hover:text-white transition-colors">
+                  <Link href="/jobs" className="hover:text-white transition-colors">
                     Browse Jobs
                   </Link>
                 </li>
@@ -123,7 +123,7 @@ const Navbar = () => {
               <ul className="flex flex-col gap-4 text-sm font-medium text-zinc-400">
                 <li>
                   <Link 
-                    href="#" 
+                    href="/jobs" 
                     onClick={() => setIsOpen(false)}
                     className="block py-2 hover:text-white transition-colors border-b border-zinc-800/40"
                   >
