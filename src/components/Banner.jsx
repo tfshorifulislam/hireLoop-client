@@ -5,7 +5,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <section className="relative min-h-screen w-full bg-[#030303] text-white flex flex-col items-center justify-start overflow-hidden pt-10 md:pt-20 pb-5">
+        <section className="relative min-h-screen w-full bg-[#030303] text-white flex flex-col items-center justify-start overflow-hidden pb-5">
 
             {/* Background Glow */}
             <div className="absolute bottom-[15%] left-1/2 -translate-x-1/2 w-[140%] aspect-square max-w-5xl bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.25)_0%,rgba(88,28,135,0.08)_50%,transparent_100%)] rounded-full blur-3xl pointer-events-none -z-10"></div>
